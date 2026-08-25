@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 
 const testimonials = [
   {
-    quote: "Fall Fest 2025 was the first time I ran a quantum circuit on real hardware. The workshop made it feel less like science fiction and more like a skill I could actually learn.",
+    quote: "Joining SQC was the first time I ran a quantum circuit on real hardware. The workshop made it feel less like science fiction and more like a skill I could actually learn.",
     name: "Priya Sharma",
     role: "Computer Science & Engineering",
     year: "3rd Year",

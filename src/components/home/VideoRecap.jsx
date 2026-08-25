@@ -12,7 +12,7 @@ export default function VideoRecap() {
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#120d1c] border border-[#a855f7]/30 mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-[#c084fc]" />
           <span className="font-mono text-xs font-semibold text-[#c084fc] tracking-widest uppercase">
-            FALL FEST 2025 ARCHIVE
+            SQC HIGHLIGHTS ARCHIVE
           </span>
         </div>
 
@@ -24,7 +24,7 @@ export default function VideoRecap() {
         <div className="max-w-[900px] mx-auto aspect-video rounded-2xl overflow-hidden relative border border-white/15 bg-[#120d1c] shadow-2xl cursor-pointer group">
           <img
             src="/assets/fallfest/Full_Illustration.png"
-            alt="IBM Qiskit Fall Fest 2025 Keynote and Workshops"
+            alt="Symbiosis Quantum Club Keynote and Workshops"
             className="w-full h-full object-cover brightness-75 contrast-110 group-hover:scale-103 group-hover:brightness-90 transition-all duration-700 ease-out"
             loading="lazy"
           />
@@ -39,7 +39,7 @@ export default function VideoRecap() {
               </div>
 
               <span className="font-mono text-xs sm:text-sm bg-black/75 backdrop-blur-md px-4 py-1.5 rounded-full text-slate-200 border border-white/15 tracking-wider uppercase font-semibold">
-                Watch Festival Highlights
+                Watch Club Highlights
               </span>
             </div>
           </div>

@@ -12,28 +12,28 @@ export default function JourneyCTA() {
 
       <div className="w-full max-w-[1440px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 relative z-10">
         
-        {/* Register Card */}
+        {/* Explore Events Card */}
         <div className="relative overflow-hidden rounded-3xl p-8 sm:p-12 min-h-[340px] sm:min-h-[380px] flex flex-col justify-between border border-white/15 bg-[#120d1c]/90 shadow-2xl group hover:border-[#d946ef]/50 transition-all duration-500">
           <div className="absolute w-0 h-0 group-hover:w-[170%] group-hover:h-[170%] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-purple-500/10 transition-all duration-700 ease-out z-[1] pointer-events-none" aria-hidden="true" />
           
           <div className="relative z-10 flex flex-col gap-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full font-mono text-[0.68rem] font-bold tracking-wider uppercase bg-[#a855f7]/15 text-[#c084fc] border border-[#a855f7]/30 w-fit">
-              ✦ IBM QISKIT PARTNER
+              ✦ SQC INITIATIVES
             </div>
             <h3 className="font-display text-2xl sm:text-4xl font-extrabold text-white tracking-tight m-0">
-              Register for Fall Fest 2026
+              Explore SQC Events & Research
             </h3>
             <p className="font-body text-sm sm:text-base text-slate-300 leading-relaxed max-w-[42ch] m-0">
-              Three days of immersive quantum circuits, hardware workshops, and competitive hackathons powered by IBM Quantum.
+              Immersive quantum circuit sessions, expert lectures, hands-on algorithm labs, and research showcases.
             </p>
           </div>
 
           <div className="relative z-10 pt-6">
             <Link 
-              to="/fallfest" 
+              to="/events" 
               className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-wider px-6 py-3.5 rounded-full bg-gradient-to-r from-[#a855f7] to-[#d946ef] text-white shadow-[0_0_20px_rgba(168,85,247,0.35)] group-hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] group-hover:scale-102 transition-all duration-200"
             >
-              <span>SIGN UP NOW</span>
+              <span>EXPLORE EVENTS</span>
               <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
