@@ -8,6 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.next/
+next-env.d.ts
 dist
 dist-ssr
 *.local
@@ -26,3 +28,6 @@ dist-ssr
 old_team_*.txt
 public1
 sqc-site
+
+# Backend database
+server/data/

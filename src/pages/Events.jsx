@@ -124,8 +124,6 @@ export default function Events() {
 
   const [statusFilter, setStatusFilter] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
-  const [registeredEmail, setRegisteredEmail] = useState('')
-  const [isSubscribed, setIsSubscribed] = useState(false)
 
   useEffect(() => {
     document.title = selectedCategory === 'Hub'
@@ -209,14 +207,6 @@ export default function Events() {
     return `${month} ${day}, ${year}`
   }
 
-  const handleSubscribe = (e) => {
-    e.preventDefault()
-    if (registeredEmail.trim()) {
-      setIsSubscribed(true)
-      setRegisteredEmail('')
-      setTimeout(() => setIsSubscribed(false), 4000)
-    }
-  }
 
   const activeCategoryInfo = CATEGORY_HUB_DATA[selectedCategory]
 
@@ -518,48 +508,6 @@ export default function Events() {
 
         </div>
 
-        {/* ── Bottom Editorial Newsletter CTA Section (Sunrise Flame Theme) ── */}
-        <section className="mt-24 p-8 sm:p-12 lg:p-16 rounded-2xl bg-gradient-to-br from-[#ef4444]/15 via-[#121513]/80 to-[#070a08] border border-[#f59e0b]/30 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 items-center relative overflow-hidden shadow-2xl">
-          <h2 className="font-display text-[clamp(1.8rem,3.2vw,2.75rem)] font-bold leading-tight text-white m-0 tracking-tight">
-            Be part of the next <span className="bg-gradient-to-r from-[#ef4444] via-[#f97316] to-[#eab308] bg-clip-text text-transparent">quantum milestone</span> at Symbiosis.
-          </h2>
-
-          <div className="flex flex-col gap-4">
-            <h3 className="font-display text-lg font-semibold text-white m-0">
-              Subscribe to Event Alerts & Registrations
-            </h3>
-
-            <form onSubmit={handleSubscribe} className="flex items-center relative w-full">
-              <input
-                type="email"
-                placeholder="Enter your email for event notifications..."
-                value={registeredEmail}
-                onChange={(e) => setRegisteredEmail(e.target.value)}
-                className="w-full py-3.5 pl-5 pr-14 bg-[#090d0a]/80 border border-[#f59e0b]/30 rounded-full font-body text-sm text-white outline-none transition-all duration-200 focus:border-[#f59e0b] focus:shadow-[0_0_20px_rgba(245,158,11,0.25)] placeholder:text-slate-500"
-                required
-              />
-              <button
-                type="submit"
-                className="absolute right-1.5 w-10 h-10 rounded-full bg-gradient-to-r from-[#ef4444] via-[#f97316] to-[#eab308] text-slate-950 flex items-center justify-center hover:scale-105 hover:shadow-[0_4px_16px_rgba(245,158,11,0.4)] transition-all duration-200"
-                aria-label="Subscribe to events"
-              >
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </form>
-
-            {isSubscribed ? (
-              <p className="font-mono text-xs text-[#f59e0b] m-0">
-                ✓ Subscribed! You will receive instant notifications for upcoming SQC events.
-              </p>
-            ) : (
-              <p className="font-mono text-xs text-slate-500 m-0">
-                Get early registration access for workshops, hackathons, and lab visits.
-              </p>
-            )}
-          </div>
-        </section>
 
       </div>
     </main>

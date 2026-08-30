@@ -192,17 +192,7 @@ export default function Navbar() {
               <circle cx="4" cy="4" r="2" />
             </svg>
           </a>
-          <Link
-            to="/events"
-            className="group inline-flex items-center gap-2 font-display text-[0.75rem] font-bold uppercase tracking-[0.08em] px-5 py-2.5 rounded-full border border-fuchsia-500 text-white bg-gradient-to-br from-purple-600 to-fuchsia-600 shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:from-purple-400 hover:to-pink-500 hover:border-pink-500 hover:shadow-[0_0_32px_rgba(236,72,153,0.6)] hover:-translate-y-0.5 transition-all duration-200"
-          >
-            <span>JOIN CLUB</span>
-            <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition-all duration-200">
-              <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
-          </Link>
+
         </div>
 
         {/* Mobile Hamburger Toggle */}
@@ -237,16 +227,7 @@ export default function Navbar() {
               </Link>
             )
           })}
-          <div className="flex flex-col gap-4 w-full mt-4">
-            <Link to="/events" className="group inline-flex items-center justify-center gap-2 font-display text-sm font-bold uppercase tracking-wider px-6 py-3.5 rounded-full border border-fuchsia-500 text-white bg-gradient-to-br from-purple-600 to-fuchsia-600 shadow-[0_0_25px_rgba(168,85,247,0.45)] w-full" onClick={() => setMenuOpen(false)}>
-              <span>JOIN CLUB NOW</span>
-              <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-all duration-200">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-            </Link>
-          </div>
+
         </nav>
       </div>
     </header>

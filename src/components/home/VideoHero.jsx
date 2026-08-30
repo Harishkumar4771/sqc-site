@@ -152,7 +152,7 @@ export default function VideoHero() {
             to="/fallfest" 
             className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-wider px-7 py-3.5 rounded-full bg-gradient-to-r from-[#a855f7] to-[#d946ef] text-white border border-[#d946ef] shadow-[0_0_30px_rgba(168,85,247,0.45)] hover:from-[#c084fc] hover:to-[#ec4899] hover:border-[#ec4899] hover:shadow-[0_0_40px_rgba(236,72,153,0.65)] hover:-translate-y-0.5 transition-all duration-300 group"
           >
-            <span>REGISTER FOR FALL FEST</span>
+            <span>EXPLORE FALL FEST</span>
             <span className="w-6.5 h-6.5 bg-white/20 rounded-full flex items-center justify-center transition-transform duration-250 group-hover:scale-115 group-hover:translate-x-0.5 group-hover:bg-white/30">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>

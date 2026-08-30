@@ -20,11 +20,7 @@ export default function FallFest() {
           <p className="fallfest-subtitle">
             A three-day immersion into quantum computing. Learn the basics, code circuits on real IBM Quantum hardware, and build applications during our 48-hour hackathon.
           </p>
-          <div className="mt-6">
-            <a href="#register" className="fallfest-hero-btn">
-              SECURE YOUR REGISTRATION SPOT →
-            </a>
-          </div>
+
         </header>
 
         {/* 3-Day Agenda Grid */}
@@ -61,39 +57,7 @@ export default function FallFest() {
           </div>
         </section>
 
-        {/* Registration Form Card */}
-        <section className="fallfest-reg-section" id="register">
-          <div className="fallfest-reg-card card-matte">
-            <div className="text-center mb-6">
-              <span className="badge-spectrum badge-magenta mb-2">LIMITED TO 150 PARTICIPANTS</span>
-              <h2 className="fallfest-reg-title">Register For Fall Fest 2026</h2>
-              <p className="fallfest-reg-subtitle">Reserve your seat for workshops, hardware access, and hackathon mentoring.</p>
-            </div>
 
-            <form className="fallfest-form" onSubmit={(e) => e.preventDefault()}>
-              <div className="form-group">
-                <label htmlFor="name">FULL NAME</label>
-                <input type="text" id="name" placeholder="John Doe" className="form-input" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">COLLEGE EMAIL ADDRESS</label>
-                <input type="email" id="email" placeholder="john@example.edu" className="form-input" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="year">YEAR OF STUDY</label>
-                <select id="year" className="form-input">
-                  <option>1st Year (Freshman)</option>
-                  <option>2nd Year (Sophomore)</option>
-                  <option>3rd Year (Junior)</option>
-                  <option>4th Year (Senior)</option>
-                </select>
-              </div>
-              <button type="submit" className="form-submit-btn">
-                COMPLETE REGISTRATION NOW
-              </button>
-            </form>
-          </div>
-        </section>
 
       </div>
     </main>
