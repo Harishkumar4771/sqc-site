@@ -55,19 +55,8 @@ export default function VideoRecap() {
           <span className="text-[#c084fc]">127 attendees</span> ✦ <span className="text-[#f472b6]">3 days</span> ✦ <span className="text-white">12 workshops</span> ✦ <span className="text-[#38bdf8]">1 hackathon</span>
         </p>
 
-        {/* FallFest Link */}
-        <a
-          href="https://symbiosisquantumclub.vercel.app/fallfest"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-wider px-7 py-3.5 mt-8 rounded-full bg-gradient-to-r from-[#a855f7] to-[#d946ef] text-white border border-[#d946ef] shadow-[0_0_30px_rgba(168,85,247,0.45)] hover:from-[#c084fc] hover:to-[#ec4899] hover:border-[#ec4899] hover:shadow-[0_0_40px_rgba(236,72,153,0.65)] hover:-translate-y-0.5 transition-all duration-300 group"
-        >
-          <span>Visit Fall Fest 2025</span>
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </a>
       </div>
+
     </section>
   )
 }

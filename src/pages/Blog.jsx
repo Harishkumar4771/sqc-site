@@ -2,6 +2,75 @@ import { useEffect, useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import blogData from '../data/blog.json'
 
+// Authors who are part of the club
+const CLUB_AUTHORS = ['yogesh shendage', 'quantum club exec team']
+
+function isClubPost(post) {
+  const authorName = typeof post.author === 'object' ? post.author.name : post.author
+  return CLUB_AUTHORS.includes(authorName?.toLowerCase().trim())
+}
+
+function PostCard({ post, formatDate }) {
+  return (
+    <Link
+      to={`/blog/${post.id}`}
+      className="group grid grid-cols-1 sm:grid-cols-[200px_1fr] lg:grid-cols-[240px_1fr] gap-7 lg:gap-9 py-9 border-t border-white/10 first:border-t-0 first:pt-0 hover:border-[#10b981]/40 transition-colors duration-300 relative block text-left"
+    >
+      {/* 3:4 Portrait Image Frame */}
+      <div className="w-full aspect-[3/4] rounded-xl overflow-hidden relative bg-[#121513] border border-white/10 shadow-lg group-hover:border-[#10b981]/40 group-hover:shadow-[0_12px_32px_rgba(16,185,129,0.18)] transition-all duration-300">
+        <img
+          src={post.image}
+          alt={post.title}
+          className="w-full h-full object-cover transition-all duration-500 ease-out brightness-90 contrast-[1.05] group-hover:scale-[1.07] group-hover:brightness-100 group-hover:contrast-[1.1] transform-gpu"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      {/* Right Content Meta & Excerpt */}
+      <div className="flex flex-col gap-3.5">
+        <div className="flex items-center gap-4">
+          <time className="font-mono text-xs font-semibold text-[#34d399] tracking-wider uppercase" dateTime={post.date}>
+            {formatDate(post.date)}
+          </time>
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full font-mono text-[0.675rem] font-bold tracking-wider uppercase bg-[#10b981]/12 text-[#34d399] border border-[#10b981]/30">
+            {post.category}
+          </span>
+        </div>
+
+        <h3 className="font-display text-[clamp(1.25rem,2.2vw,1.65rem)] font-bold text-white leading-snug m-0 group-hover:text-[#34d399] transition-colors duration-200">
+          {post.title}
+        </h3>
+
+        <div>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#121513] border border-[#10b981]/30 text-white font-display text-xs font-semibold tracking-wide transition-all duration-200 group-hover:bg-gradient-to-r group-hover:from-[#10b981] group-hover:to-[#059669] group-hover:border-[#34d399] group-hover:text-[#041f14] group-hover:shadow-[0_4px_18px_rgba(16,185,129,0.3)] cursor-pointer">
+            Discover
+            <svg
+              className="w-3.5 h-3.5 text-[#34d399] group-hover:text-[#041f14] group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-200"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </div>
+
+        <p className="font-body text-[0.925rem] text-slate-400 leading-relaxed m-0 max-w-[60ch]">
+          {post.excerpt}
+        </p>
+
+        <div className="flex items-center gap-5 pt-1 font-mono text-[0.725rem] text-slate-500">
+          <span className="text-slate-400">By {typeof post.author === 'object' ? post.author.name : post.author}</span>
+          <span>•</span>
+          <span>{post.readTime}</span>
+        </div>
+      </div>
+    </Link>
+  )
+}
+
+
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('')
 
@@ -24,6 +93,9 @@ export default function Blog() {
       )
     })
   }, [searchQuery])
+
+  const clubPosts = filteredPosts.filter(isClubPost)
+  const popularPosts = filteredPosts.filter((p) => !isClubPost(p))
 
   const formatDate = (dateString) => {
     const date = new Date(dateString)
@@ -109,74 +181,63 @@ export default function Blog() {
               </div>
             </div>
 
-            {/* Article Feed List */}
+            {/* Article Feed — Two Sections */}
             {filteredPosts.length > 0 ? (
-              <div className="flex flex-col">
-                {filteredPosts.map((post) => (
-                  <Link 
-                    key={post.id} 
-                    to={`/blog/${post.id}`}
-                    className="group grid grid-cols-1 sm:grid-cols-[200px_1fr] lg:grid-cols-[240px_1fr] gap-7 lg:gap-9 py-9 border-t border-white/10 first:border-t-0 first:pt-0 hover:border-[#10b981]/40 transition-colors duration-300 relative block text-left"
-                  >
-                    {/* 3:4 Portrait Image Frame */}
-                    <div className="w-full aspect-[3/4] rounded-xl overflow-hidden relative bg-[#121513] border border-white/10 shadow-lg group-hover:border-[#10b981]/40 group-hover:shadow-[0_12px_32px_rgba(16,185,129,0.18)] transition-all duration-300">
-                      <img 
-                        src={post.image} 
-                        alt={post.title} 
-                        className="w-full h-full object-cover transition-all duration-500 ease-out brightness-90 contrast-[1.05] group-hover:scale-[1.07] group-hover:brightness-100 group-hover:contrast-[1.1] transform-gpu" 
-                        loading="lazy" 
-                        decoding="async"
-                      />
-                    </div>
+              <div className="flex flex-col gap-12">
 
-                    {/* Right Content Meta & Excerpt */}
-                    <div className="flex flex-col gap-3.5">
-                      <div className="flex items-center gap-4">
-                        <time className="font-mono text-xs font-semibold text-[#34d399] tracking-wider uppercase" dateTime={post.date}>
-                          {formatDate(post.date)}
-                        </time>
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full font-mono text-[0.675rem] font-bold tracking-wider uppercase bg-[#10b981]/12 text-[#34d399] border border-[#10b981]/30">
-                          {post.category}
-                        </span>
-                      </div>
-
-                      <h2 className="font-display text-[clamp(1.25rem,2.2vw,1.65rem)] font-bold text-white leading-snug m-0 group-hover:text-[#34d399] transition-colors duration-200">
-                        {post.title}
-                      </h2>
-
-                      <div>
-                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#121513] border border-[#10b981]/30 text-white font-display text-xs font-semibold tracking-wide transition-all duration-200 group-hover:bg-gradient-to-r group-hover:from-[#10b981] group-hover:to-[#059669] group-hover:border-[#34d399] group-hover:text-[#041f14] group-hover:shadow-[0_4px_18px_rgba(16,185,129,0.3)] cursor-pointer">
-                          Discover
-                          <svg 
-                            className="w-3.5 h-3.5 text-[#34d399] group-hover:text-[#041f14] group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-200" 
-                            viewBox="0 0 16 16" 
-                            fill="none" 
-                            aria-hidden="true"
-                          >
-                            <path 
-                              d="M4 12L12 4M12 4H6M12 4V10" 
-                              stroke="currentColor" 
-                              strokeWidth="2" 
-                              strokeLinecap="round" 
-                              strokeLinejoin="round" 
-                            />
-                          </svg>
-                        </span>
-                      </div>
-
-                      <p className="font-body text-[0.925rem] text-slate-400 leading-relaxed m-0 max-w-[60ch]">
-                        {post.excerpt}
-                      </p>
-
-                      <div className="flex items-center gap-5 pt-1 font-mono text-[0.725rem] text-slate-500">
-                        <span className="text-slate-400">By {typeof post.author === 'object' ? post.author.name : post.author}</span>
-                        <span>•</span>
-                        <span>{post.readTime}</span>
+                {/* ── Section 1: Blog by our Club ── */}
+                {clubPosts.length > 0 && (
+                  <div>
+                    <div className="flex items-center gap-4 mb-8">
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-3">
+                          <span className="w-5 h-[2px] bg-gradient-to-r from-[#34d399] to-[#10b981]" />
+                          <span className="font-mono text-[0.625rem] font-bold tracking-widest text-[#34d399] uppercase">
+                            Written By
+                          </span>
+                        </div>
+                        <h2 className="font-display text-xl sm:text-2xl font-extrabold text-white tracking-tight m-0">
+                          Blog by our Club
+                          <span className="block font-mono text-[0.7rem] font-normal text-slate-400 tracking-wider mt-1 normal-case">
+                            Yogesh Shendage &amp; Quantum Club Exec Team
+                          </span>
+                        </h2>
                       </div>
                     </div>
 
-                  </Link>
-                ))}
+                    <div className="flex flex-col">
+                      {clubPosts.map((post) => (
+                        <PostCard key={post.id} post={post} formatDate={formatDate} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* ── Section 2: Some Popular Blogs ── */}
+                {popularPosts.length > 0 && (
+                  <div>
+                    <div className="flex items-center gap-4 mb-8">
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-3">
+                          <span className="w-5 h-[2px] bg-gradient-to-r from-cyan-400 to-[#06b6d4]" />
+                          <span className="font-mono text-[0.625rem] font-bold tracking-widest text-cyan-400 uppercase">
+                            Community Reads
+                          </span>
+                        </div>
+                        <h2 className="font-display text-xl sm:text-2xl font-extrabold text-white tracking-tight m-0">
+                          Some Popular Blogs
+                        </h2>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col">
+                      {popularPosts.map((post) => (
+                        <PostCard key={post.id} post={post} formatDate={formatDate} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
               </div>
             ) : (
               <div className="py-16 px-8 text-center flex flex-col items-center gap-5 text-slate-400 font-body">
