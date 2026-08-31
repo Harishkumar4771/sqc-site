@@ -4,8 +4,6 @@ import blogData from '../data/blog.json'
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('')
-  const [emailInput, setEmailInput] = useState('')
-  const [subscribed, setSubscribed] = useState(false)
 
   useEffect(() => {
     document.title = 'Quantum Insights — Symbiosis Quantum Club'
@@ -32,15 +30,6 @@ export default function Blog() {
     const month = date.toLocaleString('en-US', { month: 'short' }).toUpperCase()
     const year = date.getFullYear()
     return `${month}, ${year}`
-  }
-
-  const handleSubscribe = (e) => {
-    e.preventDefault()
-    if (emailInput.trim()) {
-      setSubscribed(true)
-      setEmailInput('')
-      setTimeout(() => setSubscribed(false), 4000)
-    }
   }
 
   return (
@@ -204,48 +193,6 @@ export default function Blog() {
 
         </div>
 
-        {/* ── Bottom Editorial Newsletter CTA Section ── */}
-        <section className="mt-24 p-8 sm:p-12 lg:p-16 rounded-2xl bg-gradient-to-br from-[#10b981]/10 via-[#121513]/80 to-[#070a08] border border-[#10b981]/25 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 items-center relative overflow-hidden shadow-2xl">
-          <h2 className="font-display text-[clamp(1.8rem,3.2vw,2.75rem)] font-bold leading-tight text-white m-0 tracking-tight">
-            We shape quantum <span className="bg-gradient-to-r from-[#34d399] to-[#10b981] bg-clip-text text-transparent">innovation</span>, collaboration, and <span className="bg-gradient-to-r from-[#34d399] to-[#10b981] bg-clip-text text-transparent">execution</span>.
-          </h2>
-
-          <div className="flex flex-col gap-4">
-            <h3 className="font-display text-lg font-semibold text-white m-0">
-              Subscribe to the Quantum Dispatch
-            </h3>
-            
-            <form onSubmit={handleSubscribe} className="flex items-center relative w-full">
-              <input 
-                type="email" 
-                placeholder="Enter your email address..." 
-                value={emailInput}
-                onChange={(e) => setEmailInput(e.target.value)}
-                className="w-full py-3.5 pl-5 pr-14 bg-[#090d0a]/80 border border-[#10b981]/30 rounded-full font-body text-sm text-white outline-none transition-all duration-200 focus:border-[#34d399] focus:shadow-[0_0_20px_rgba(16,185,129,0.25)] placeholder:text-slate-500"
-                required 
-              />
-              <button 
-                type="submit" 
-                className="absolute right-1.5 w-10 h-10 rounded-full bg-gradient-to-r from-[#10b981] to-[#059669] text-[#041f14] flex items-center justify-center hover:scale-105 hover:shadow-[0_4px_16px_rgba(16,185,129,0.4)] transition-all duration-200" 
-                aria-label="Subscribe"
-              >
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </form>
-
-            {subscribed ? (
-              <p className="font-mono text-xs text-[#34d399] m-0">
-                ✓ Subscribed! You will receive our latest quantum insights.
-              </p>
-            ) : (
-              <p className="font-mono text-xs text-slate-500 m-0">
-                By subscribing you agree to receive monthly Symbiosis Quantum Club updates.
-              </p>
-            )}
-          </div>
-        </section>
 
       </div>
     </main>
