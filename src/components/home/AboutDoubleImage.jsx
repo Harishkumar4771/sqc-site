@@ -39,8 +39,8 @@ export default function AboutDoubleImage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07040d]/90 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-[#120d1c]/90 border border-white/15 backdrop-blur-md">
-                <span className="block font-mono text-[0.72rem] font-semibold text-white truncate">Qiskit Fall Fest</span>
-                <span className="block font-mono text-[0.62rem] text-[#f472b6] uppercase tracking-wider">Hands-on Sprints</span>
+                <span className="block font-mono text-[0.72rem] font-semibold text-white truncate">Quantum Circuits</span>
+                <span className="block font-mono text-[0.62rem] text-[#f472b6] uppercase tracking-wider">Hands-on Labs</span>
               </div>
             </div>
           </div>
@@ -67,18 +67,18 @@ export default function AboutDoubleImage() {
             </p>
 
             <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed m-0">
-              From our flagship IBM Qiskit Fall Fest hackathons to physical delegations at national research laboratories, our members collaborate, construct algorithms, and publish quantum insights.
+              From our hands-on workshops and algorithm hackathons to physical delegations at national research laboratories, our members collaborate, construct algorithms, and publish quantum insights.
             </p>
 
             {/* Bento Stats Grid */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-3 pt-6 border-t border-white/10">
               <div className="p-4 rounded-xl bg-[#120d1c]/80 border border-white/10 flex flex-col gap-1">
                 <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#c084fc] tracking-tight leading-none">127+</span>
-                <span className="font-mono text-[0.68rem] sm:text-xs text-slate-400 uppercase tracking-wider">2025 Attendees</span>
+                <span className="font-mono text-[0.68rem] sm:text-xs text-slate-400 uppercase tracking-wider">Active Members</span>
               </div>
               <div className="p-4 rounded-xl bg-[#120d1c]/80 border border-white/10 flex flex-col gap-1">
-                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#f472b6] tracking-tight leading-none">3 Days</span>
-                <span className="font-mono text-[0.68rem] sm:text-xs text-slate-400 uppercase tracking-wider">Flagship Fest</span>
+                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#f472b6] tracking-tight leading-none">Year-round</span>
+                <span className="font-mono text-[0.68rem] sm:text-xs text-slate-400 uppercase tracking-wider">Workshops</span>
               </div>
               <div className="p-4 rounded-xl bg-[#120d1c]/80 border border-white/10 flex flex-col gap-1">
                 <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#38bdf8] tracking-tight leading-none">12+</span>

@@ -109,7 +109,7 @@ export default function VideoHero() {
         <div className="flex items-center gap-4 mb-6">
           <div className="hero__divider w-10 h-[2px] bg-gradient-to-r from-[#a855f7] to-[#ec4899] origin-left shadow-[0_0_12px_rgba(168,85,247,0.8)]" />
           <span className="hero__eyebrow font-mono text-xs sm:text-sm font-semibold tracking-widest text-[#c084fc] uppercase">
-            SYMBIOSIS QUANTUM CLUB ✦ IBM QISKIT FALL FEST 2026
+            SYMBIOSIS QUANTUM CLUB ✦ QUANTUM COMPUTING INITIATIVE
           </span>
         </div>
 
@@ -128,7 +128,7 @@ export default function VideoHero() {
 
         {/* Description */}
         <p className="hero__description font-body text-base sm:text-lg lg:text-xl leading-relaxed text-slate-300 max-w-[60ch] mb-8">
-          Symbiosis Quantum Club is an experiential launchpad for student researchers, hardware builders, and algorithm pioneers. Join three days of hands-on IBM Qiskit workshops, hackathons, and lectures.
+          Symbiosis Quantum Club is an experiential launchpad for student researchers, hardware builders, and algorithm pioneers. Join hands-on quantum computing workshops, algorithm hackathons, and research projects.
         </p>
 
         {/* Live Metric Badges */}
@@ -142,28 +142,22 @@ export default function VideoHero() {
             <span className="font-mono text-xs font-semibold text-slate-200">12+ Workshops</span>
           </div>
           <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#120d1c]/90 border border-white/15 backdrop-blur-md">
-            <span className="font-mono text-xs font-semibold text-[#c084fc]">✦ IBM Qiskit Partner</span>
+            <span className="font-mono text-xs font-semibold text-[#c084fc]">✦ Student Quantum Community</span>
           </div>
         </div>
 
         {/* Actions */}
         <div className="hero__actions flex flex-wrap items-center gap-4 sm:gap-5">
           <Link 
-            to="/fallfest" 
-            className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-wider px-7 py-3.5 rounded-full bg-gradient-to-r from-[#a855f7] to-[#d946ef] text-white border border-[#d946ef] shadow-[0_0_30px_rgba(168,85,247,0.45)] hover:from-[#c084fc] hover:to-[#ec4899] hover:border-[#ec4899] hover:shadow-[0_0_40px_rgba(236,72,153,0.65)] hover:-translate-y-0.5 transition-all duration-300 group"
+            to="/events" 
+            className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-wider px-8 py-4 rounded-full bg-gradient-to-r from-[#a855f7] to-[#d946ef] text-white border border-[#d946ef] shadow-[0_0_30px_rgba(168,85,247,0.45)] hover:from-[#c084fc] hover:to-[#ec4899] hover:border-[#ec4899] hover:shadow-[0_0_40px_rgba(236,72,153,0.65)] hover:-translate-y-0.5 transition-all duration-300 group"
           >
-            <span>EXPLORE FALL FEST</span>
+            <span>EXPLORE EVENTS</span>
             <span className="w-6.5 h-6.5 bg-white/20 rounded-full flex items-center justify-center transition-transform duration-250 group-hover:scale-115 group-hover:translate-x-0.5 group-hover:bg-white/30">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </span>
-          </Link>
-          <Link 
-            to="/events" 
-            className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-wider px-7 py-3.5 rounded-full border border-[#a855f7]/35 text-white bg-[#a855f7]/[0.06] backdrop-blur-md hover:border-[#c084fc] hover:text-[#c084fc] hover:bg-[#a855f7]/15 hover:shadow-[0_0_24px_rgba(168,85,247,0.3)] hover:-translate-y-0.5 transition-all duration-300"
-          >
-            EXPLORE EVENTS
           </Link>
         </div>
       </div>
