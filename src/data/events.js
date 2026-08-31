@@ -151,6 +151,7 @@ const EVENTS = [
   {
     id: 'qiskit-fall-fest-2025',
     slug: 'qiskit-fall-fest-2025',
+    link: '/fallfest',
     title: 'IBM Qiskit Fall Fest 2025',
     subtitle: 'Quantum Fundamentals & Circuits — Our First Year',
     category: 'Fall Fest',
