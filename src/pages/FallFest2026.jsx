@@ -1,37 +1,37 @@
 import { useEffect } from 'react'
 import './FallFest.css'
 
-export default function FallFest() {
+export default function FallFest2026() {
   useEffect(() => {
-    document.title = 'IBM Qiskit Fall Fest 2025 — Symbiosis Quantum Club'
+    document.title = 'IBM Qiskit Fall Fest 2026 — Symbiosis Quantum Club'
   }, [])
 
   return (
     <main className="fallfest-page">
       <div className="fallfest-container">
-        
+
         {/* Hero Header */}
         <header className="fallfest-hero text-center">
-          <span className="badge-spectrum badge-magenta mb-3">OCTOBER – NOVEMBER 2025 ✦ IBM PARTNERSHIP</span>
+          <span className="badge-spectrum badge-magenta mb-3">OCTOBER 15–17, 2026 ✦ IBM PARTNERSHIP</span>
           <h1 className="fallfest-title">
-            IBM Qiskit Fall Fest 2025 <br />
+            IBM Qiskit Fall Fest 2026 <br />
             <span className="fallfest-title-accent">at Symbiosis</span>
           </h1>
           <p className="fallfest-subtitle">
-            Our inaugural IBM Qiskit Fall Fest — 4 weeks of quantum workshops, hands-on labs on real IBM hardware, and an 8-hour mini hackathon that launched SQC onto the global quantum stage.
+            A three-day immersion into quantum computing. Learn the basics, code circuits on real IBM Quantum hardware, and build applications during our 48-hour hackathon.
           </p>
         </header>
 
-        {/* Program Grid */}
+        {/* 3-Day Agenda Grid */}
         <section className="fallfest-agenda">
           <div className="section-heading text-center">
-            <span className="badge-spectrum badge-violet mb-2">4-WEEK PROGRAM</span>
+            <span className="badge-spectrum badge-violet mb-2">3-DAY PROGRAM</span>
             <h2>Event Schedule & Tracks</h2>
           </div>
 
           <div className="fallfest-grid">
             <div className="fallfest-card card-matte">
-              <span className="badge-spectrum badge-cyan mb-3">WEEK 1–2 ✦ FOUNDATIONS</span>
+              <span className="badge-spectrum badge-cyan mb-3">DAY 1 ✦ FOUNDATIONS</span>
               <h3 className="fallfest-card__title">The Quantum Basics</h3>
               <p className="fallfest-card__desc">
                 No prior experience required. Intro to linear algebra, qubit superposition, entanglement, and how to access IBM Cloud Quantum systems.
@@ -39,18 +39,18 @@ export default function FallFest() {
             </div>
 
             <div className="fallfest-card card-matte">
-              <span className="badge-spectrum badge-violet mb-3">WEEK 3 ✦ LAB WORKSHOPS</span>
+              <span className="badge-spectrum badge-violet mb-3">DAY 2 ✦ LAB WORKSHOPS</span>
               <h3 className="fallfest-card__title">Qiskit Circuit Lab</h3>
               <p className="fallfest-card__desc">
-                Hands-on programming. Build quantum algorithms, execute circuits, and run jobs directly on IBM quantum hardware via the cloud.
+                Hands-on programming. Build quantum algorithms, execute pulse calibrations, and run jobs directly on IBM Eagle & Osprey QPUs.
               </p>
             </div>
 
             <div className="fallfest-card card-matte">
-              <span className="badge-spectrum badge-magenta mb-3">WEEK 4 ✦ HACKATHON</span>
-              <h3 className="fallfest-card__title">8-Hour Mini Hackathon</h3>
+              <span className="badge-spectrum badge-magenta mb-3">DAY 3 ✦ HACKATHON</span>
+              <h3 className="fallfest-card__title">48-Hour Hackathon</h3>
               <p className="fallfest-card__desc">
-                12 teams tackled quantum optimisation problems — 4 projects submitted for IBM review. Our first step onto the global quantum stage.
+                Form teams to solve real-world problems in QML, chemistry, and cryptography. Evaluated by IBM quantum researchers with prizes.
               </p>
             </div>
           </div>

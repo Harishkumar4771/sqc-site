@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Events from './pages/Events'
 import EventDetail from './pages/EventDetail'
 import FallFest from './pages/FallFest'
+import FallFest2026 from './pages/FallFest2026'
 import Blog from './pages/Blog'
 import BlogDetail from './pages/BlogDetail'
 import Team from './pages/Team'
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/events/:id" element={<EventDetail />} />
           <Route path="/fallfest" element={<FallFest />} />
+          <Route path="/fallfest-2026" element={<FallFest2026 />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/team" element={<Team />} />
