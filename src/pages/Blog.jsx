@@ -107,15 +107,15 @@ export default function Blog() {
   return (
     <main className="bg-[#070a08] min-h-screen pt-28 pb-24 text-slate-200 relative overflow-x-clip">
       {/* ── Dotted Background Grid ── */}
-      <div 
-        className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none z-0" 
-        aria-hidden="true" 
+      <div
+        className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none z-0"
+        aria-hidden="true"
       />
 
       <div className="w-full max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
         {/* Redefined Grid Container Tracks: 520px Left Editorial Sidebar, 1fr Right Stream */}
         <div className="grid grid-cols-1 lg:grid-cols-[520px_1fr] gap-8 lg:gap-12 items-start">
-          
+
           {/* ── Left Sticky Editorial Sidebar (Balanced Alignment) ── */}
           <aside className="flex flex-col gap-6 lg:sticky lg:top-[145px] lg:self-start lg:h-fit lg:z-10 pt-6 lg:pt-10">
             {/* Header Lockup: Line Accent + Monospace Eyebrow */}
@@ -146,32 +146,32 @@ export default function Blog() {
             {/* Search Bar Header */}
             <div className="flex items-center pb-6 mb-6 border-b border-[#10b981]/20">
               <div className="relative w-full">
-                <svg 
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#34d399] pointer-events-none" 
-                  width="18" 
-                  height="18" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
+                <svg
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#34d399] pointer-events-none"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
                 >
                   <circle cx="11" cy="11" r="8" />
                   <line x1="21" y1="21" x2="16.65" y2="16.65" />
                 </svg>
-                
-                <input 
-                  type="text" 
-                  placeholder="Search quantum articles, topics, authors..." 
+
+                <input
+                  type="text"
+                  placeholder="Search quantum articles, topics, authors..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full py-3.5 pl-12 pr-11 bg-[#121513]/85 border border-[#10b981]/25 rounded-full font-body text-sm text-white placeholder:text-slate-500 outline-none transition-all duration-200 focus:border-[#34d399] focus:bg-[#121513]/95 focus:shadow-[0_0_24px_rgba(16,185,129,0.25)]"
                 />
 
                 {searchQuery && (
-                  <button 
-                    onClick={() => setSearchQuery('')} 
+                  <button
+                    onClick={() => setSearchQuery('')}
                     className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-[#34d399] transition-colors p-1 flex items-center justify-center text-xs"
                     aria-label="Clear search"
                   >
@@ -213,37 +213,19 @@ export default function Blog() {
                   </div>
                 )}
 
-                {/* ── Section 2: Some Popular Blogs ── */}
-                {popularPosts.length > 0 && (
-                  <div>
-                    <div className="flex items-center gap-4 mb-8">
-                      <div className="flex flex-col gap-1">
-                        <div className="flex items-center gap-3">
-                          <span className="w-5 h-[2px] bg-gradient-to-r from-cyan-400 to-[#06b6d4]" />
-                          <span className="font-mono text-[0.625rem] font-bold tracking-widest text-cyan-400 uppercase">
-                            Community Reads
-                          </span>
-                        </div>
-                        <h2 className="font-display text-xl sm:text-2xl font-extrabold text-white tracking-tight m-0">
-                          Some Popular Blogs
-                        </h2>
-                      </div>
-                    </div>
 
-                    <div className="flex flex-col">
-                      {popularPosts.map((post) => (
-                        <PostCard key={post.id} post={post} formatDate={formatDate} />
-                      ))}
-                    </div>
-                  </div>
-                )}
 
+                <div className="flex flex-col">
+                  {popularPosts.map((post) => (
+                    <PostCard key={post.id} post={post} formatDate={formatDate} />
+                  ))}
+                </div>
               </div>
             ) : (
               <div className="py-16 px-8 text-center flex flex-col items-center gap-5 text-slate-400 font-body">
                 <p>No publications found matching &ldquo;{searchQuery}&rdquo;</p>
-                <button 
-                  onClick={() => setSearchQuery('')} 
+                <button
+                  onClick={() => setSearchQuery('')}
                   className="px-4 py-2 rounded-full bg-gradient-to-r from-[#10b981] to-[#059669] text-[#041f14] font-display text-xs font-bold transition-transform hover:scale-105"
                 >
                   Reset Search
@@ -251,10 +233,7 @@ export default function Blog() {
               </div>
             )}
           </section>
-
         </div>
-
-
       </div>
     </main>
   )
