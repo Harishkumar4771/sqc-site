@@ -8,7 +8,7 @@ const BADGE_STYLES = {
 
 export default function WhyQuantumMarquee() {
   const items = [
-    { text: 'IBM Qiskit Fall Fest', accent: 'violet', tag: 'FLAGSHIP' },
+    { text: 'Quantum Hackathons', accent: 'violet', tag: 'FLAGSHIP' },
     { text: 'Quantum Supremacy', accent: 'cyan', tag: 'ALGORITHMS' },
     { text: 'Qubit Hardware Labs', accent: 'magenta', tag: 'HARDWARE' },
     { text: 'Quantum Cryptography', accent: 'emerald', tag: 'SECURITY' },
