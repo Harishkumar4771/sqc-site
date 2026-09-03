@@ -18,14 +18,14 @@ export default function FallFest2026() {
             <span className="fallfest-title-accent">at Symbiosis</span>
           </h1>
           <p className="fallfest-subtitle">
-            A three-day immersion into quantum computing. Learn the basics, code circuits on real IBM Quantum hardware, and build applications during our 48-hour hackathon.
+            A comprehensive immersion into quantum computing. Learn the basics, explore quantum algorithms, and code circuits on real IBM Quantum hardware.
           </p>
         </header>
 
-        {/* 3-Day Agenda Grid */}
+        {/* Agenda Grid */}
         <section className="fallfest-agenda">
           <div className="section-heading text-center">
-            <span className="badge-spectrum badge-violet mb-2">3-DAY PROGRAM</span>
+            <span className="badge-spectrum badge-violet mb-2">EVENT TRACKS</span>
             <h2>Event Schedule & Tracks</h2>
           </div>
 
@@ -43,14 +43,6 @@ export default function FallFest2026() {
               <h3 className="fallfest-card__title">Qiskit Circuit Lab</h3>
               <p className="fallfest-card__desc">
                 Hands-on programming. Build quantum algorithms, execute pulse calibrations, and run jobs directly on IBM Eagle & Osprey QPUs.
-              </p>
-            </div>
-
-            <div className="fallfest-card card-matte">
-              <span className="badge-spectrum badge-magenta mb-3">DAY 3 ✦ HACKATHON</span>
-              <h3 className="fallfest-card__title">48-Hour Hackathon</h3>
-              <p className="fallfest-card__desc">
-                Form teams to solve real-world problems in QML, chemistry, and cryptography. Evaluated by IBM quantum researchers with prizes.
               </p>
             </div>
           </div>

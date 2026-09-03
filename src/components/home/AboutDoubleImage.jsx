@@ -73,7 +73,7 @@ export default function AboutDoubleImage() {
             {/* Bento Stats Grid */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-3 pt-6 border-t border-white/10">
               <div className="p-4 rounded-xl bg-[#120d1c]/80 border border-white/10 flex flex-col gap-1">
-                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#c084fc] tracking-tight leading-none">127+</span>
+                <span className="font-display text-2xl sm:text-3xl font-extrabold text-[#c084fc] tracking-tight leading-none">20+</span>
                 <span className="font-mono text-[0.68rem] sm:text-xs text-slate-400 uppercase tracking-wider">Active Members</span>
               </div>
               <div className="p-4 rounded-xl bg-[#120d1c]/80 border border-white/10 flex flex-col gap-1">
