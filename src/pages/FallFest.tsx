@@ -341,11 +341,11 @@ function ColabSection() {
 
 function OrganizersSection() {
     const organizers = [
-        {name: "Dr. Archana Chaudhari", role: "Faculty in-Charge", img: "/assets/Team/Archana ma'am.png", email: "archana.chaudhari@sitpune.edu.in"},
-        {name: "Samarth Bhadane", role: "Club Head", img: "/assets/Team/Samarth.png", email: "samarth.bhadane.btech2023@sitpune.edu.in"},
-        {name: "Anirudh Raman", role: "Research Head", img: "/assets/Team/Anirudh.png", email: "ganapathy.anirudh.btech2023@sitpune.edu.in"},
-        {name: "Eric Siquiera", role: "Technical Head", img: "/assets/Team/Eric.png", email: "eric.siqueira.btech2023@sitpune.edu.in"},
-        {name: "Disha Gupta", role: "Technical Head", img: "/assets/Team/Disha.png", email: "disha.gupta.btech2023@sitpune.edu.in"},
+        {name: "Dr. Archana Chaudhari", role: "Faculty in-Charge", img: "/assets/team/archana-maam.png", email: "archana.chaudhari@sitpune.edu.in"},
+        {name: "Samarth Bhadane", role: "Club Head", img: "/assets/team/samarth.png", email: "samarth.bhadane.btech2023@sitpune.edu.in"},
+        {name: "Anirudh Raman", role: "Research Head", img: "/assets/team/anirudh.png", email: "ganapathy.anirudh.btech2023@sitpune.edu.in"},
+        {name: "Eric Siquiera", role: "Technical Head", img: "/assets/team/eric.png", email: "eric.siqueira.btech2023@sitpune.edu.in"},
+        {name: "Disha Gupta", role: "Technical Head", img: "/assets/team/disha.png", email: "disha.gupta.btech2023@sitpune.edu.in"},
     ];
 
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);

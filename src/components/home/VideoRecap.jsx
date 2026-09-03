@@ -52,7 +52,7 @@ export default function VideoRecap() {
 
         {/* Stats strip */}
         <p className="font-mono text-xs sm:text-sm text-slate-400 mt-8 tracking-wide">
-          <span className="text-[#c084fc]">127 attendees</span> ✦ <span className="text-[#f472b6]">3 days</span> ✦ <span className="text-white">12 workshops</span> ✦ <span className="text-[#38bdf8]">1 hackathon</span>
+          <span className="text-[#c084fc]">127 attendees</span> ✦ <span className="text-[#f472b6]">3 days</span> ✦ <span className="text-white">12 workshops</span>
         </p>
 
       </div>
